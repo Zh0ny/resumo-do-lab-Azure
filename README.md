@@ -1,7 +1,6 @@
-
 # Basic Azure Onboarding
 
-This repository documents my experience with **Microsoft Azure** onboarding, carried out in a DIO lab environment. During this process, I explored some key services and initial configurations, including setting up a subscription, using Azure Bastion, configuring Azure Virtual Desktop, exploring the "All Services" tab, creating a virtual machine, understanding storage account redundancy options, and setting up a private endpoint for a storage account.
+This repository documents my experience with **Microsoft Azure** onboarding, carried out in a DIO lab environment. During this process, I explored some key services and initial configurations, including setting up a subscription, using Azure Bastion, configuring Azure Virtual Desktop, exploring the "All Services" tab, creating a virtual machine, understanding storage account redundancy options, setting up a private endpoint for a storage account, and configuring an Azure SQL Database with SQL authentication and Microsoft Authentication.
 
 ---
 
@@ -27,6 +26,9 @@ This repository documents my experience with **Microsoft Azure** onboarding, car
 
 7. **Private Endpoint for Storage Account**:  
    - Creation and configuration of a private endpoint to securely access a storage account within a virtual network.
+
+8. **Azure SQL Database**:  
+   - Creation and configuration of an Azure SQL Database and its associated server with both SQL Authentication and Microsoft Authentication.
 
 ---
 
@@ -57,11 +59,18 @@ This repository documents my experience with **Microsoft Azure** onboarding, car
 ### 7. Private Endpoint for Storage Account
    - **Experience**: I created a **private endpoint** to securely connect to my Azure Storage Account within a **virtual network**. This ensures that traffic between my services and the storage account does not traverse the public internet, providing an additional layer of security. The private endpoint enables the use of private IP addresses to access the storage account, restricting access to only resources within the network.
 
+### 8. Azure SQL Database Configuration
+   - **Experience**: I created an **Azure SQL Database** and configured its associated server. I enabled both **SQL Authentication** (to connect using a SQL Server login) and **Microsoft Authentication** (to allow login using Microsoft accounts). This setup ensures flexibility in how users authenticate to the database, supporting both traditional SQL logins and Azure Active Directory-based logins for more integrated security and management.
+
+   - **Steps**:
+     1. Configured the server for SQL Authentication and Microsoft Authentication.
+     2. Created a new SQL database on the server.
+
 ---
 
 ## Conclusion
 
-This basic onboarding experience on Azure allowed me to explore essential resources and become familiar with the portal, as well as compute, networking, and storage services. I also gained insights into the redundancy options available to ensure data resilience in cloud environments. Additionally, setting up a private endpoint added an important layer of security for accessing the storage account. This repository serves as a record of this onboarding and will be useful for future Azure projects.
+This basic onboarding experience on Azure allowed me to explore essential resources and become familiar with the portal, as well as compute, networking, and storage services. I also gained insights into the redundancy options available to ensure data resilience in cloud environments. Additionally, setting up a private endpoint added an important layer of security for accessing the storage account. The addition of configuring an Azure SQL Database with dual authentication methods ensures secure access while providing flexibility for users. This repository serves as a record of this onboarding and will be useful for future Azure projects.
 
 ---
 
@@ -73,6 +82,8 @@ This basic onboarding experience on Azure allowed me to explore essential resour
 - [Azure Virtual Desktop - Documentation](https://docs.microsoft.com/en-us/azure/virtual-desktop/)
 - [Azure Storage Redundancy - Documentation](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy)
 - [Private Endpoints - Documentation](https://docs.microsoft.com/en-us/azure/storage/common/storage-private-endpoints)
+- [Azure SQL Database - Documentation](https://docs.microsoft.com/en-us/azure/sql-database/)
+- [SQL Authentication vs Microsoft Authentication - Documentation](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-authentication)
 
 ---
 
